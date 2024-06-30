@@ -57,6 +57,17 @@ class Player {
             Logger.info(`Opponent's Health Reduced: New Health=${opponent.health}`);
         }
     }
+
+    /**
+     * Defends against an attack.
+     * @param {number} attackDamage - The damage of the attack.
+     * @returns {number} The damage defended.
+     */
+    defend(attackDamage) {
+        const defendedDamage = this.strength * this.rollDie();
+        Logger.info(`Defending: Defended Damage=${defendedDamage}`);
+        return defendedDamage;
+    }
 }
 
 module.exports = Player;
