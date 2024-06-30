@@ -31,6 +31,16 @@ class Player {
 
         Logger.info(`Player created: Health=${health}, Strength=${strength}, Attack=${attack}`);
     }
+
+    /**
+     * Rolls a 6-sided die.
+     * @returns {number} A random number between 1 and 6.
+     */
+    rollDie() {
+        const roll = Math.floor(Math.random() * 6) + 1;
+        Logger.info(`Die rolled: ${roll}`);
+        return roll;
+    }
 }
 
 module.exports = Player;
