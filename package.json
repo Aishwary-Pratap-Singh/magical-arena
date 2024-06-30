@@ -4,7 +4,8 @@
     "description": "implementation of magical arena",
     "main": "index.js",
     "scripts": {
-      "start-game": "node index.js"
+      "start-game": "node index.js",
+      "test": "node test.js"
     },
     "author": "Aishwary Pratap Singh",
     "license": "MIT"
