@@ -68,6 +68,16 @@ class Player {
         Logger.info(`Defending: Defended Damage=${defendedDamage}`);
         return defendedDamage;
     }
+
+    /**
+     * Checks if the player is alive.
+     * @returns {boolean} True if the player is alive, false otherwise.
+     */
+    isAlive() {
+        const alive = this.health > 0;
+        Logger.info(`Player Alive: ${alive}`);
+        return alive;
+    }
 }
 
 module.exports = Player;
