@@ -1,0 +1,11 @@
+{
+    "name": "aishwary-swiggy-assignment1",
+    "version": "1.0.0",
+    "description": "implementation of magical arena",
+    "main": "index.js",
+    "scripts": {
+      "start-game": "node index.js"
+    },
+    "author": "Aishwary Pratap Singh",
+    "license": "MIT"
+  }
