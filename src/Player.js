@@ -55,6 +55,9 @@ class Player {
         if (damage > 0) {
             opponent.health -= damage;
             Logger.info(`Opponent's Health Reduced: New Health=${opponent.health}`);
+        } else {
+            opponent.health -= damage;
+            Logger.info(`Opponent's Health Increased as Defending was greater: New Health=${opponent.health}`);
         }
     }
 

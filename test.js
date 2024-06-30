@@ -42,7 +42,8 @@ runTest('Player attackOpponent should reduce opponent\'s health correctly', () =
     playerA.attackOpponent(playerB);
 
     const expectedDamage = 10 * 6;  // Assuming rollDie() always returns 6 in this test case
-    const expectedHealthAfterAttack = initialHealthB - expectedDamage;
+    const defendStrength = 20 * 6;  // Assuming rollDie() always returns 6 in this test case
+    const expectedHealthAfterAttack = initialHealthB - expectedDamage + defendStrength;
 
     // Assert that playerB's health is reduced by expectedDamage
     assert.strictEqual(playerB.health, expectedHealthAfterAttack);
