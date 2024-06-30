@@ -41,6 +41,22 @@ class Player {
         Logger.info(`Die rolled: ${roll}`);
         return roll;
     }
+
+    /**
+     * Attacks the opponent player.
+     * @param {Player} opponent - The opponent player.
+     */
+    attackOpponent(opponent) {
+        const attackDamage = this.attack * this.rollDie();
+        Logger.info(`Attacking: Attack Damage=${attackDamage}`);
+        const defendedDamage = opponent.defend(attackDamage);
+        const damage = attackDamage - defendedDamage;
+        Logger.info(`Defended: Defended Damage=${defendedDamage}, Net Damage=${damage}`);
+        if (damage > 0) {
+            opponent.health -= damage;
+            Logger.info(`Opponent's Health Reduced: New Health=${opponent.health}`);
+        }
+    }
 }
 
 module.exports = Player;
